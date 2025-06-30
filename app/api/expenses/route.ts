@@ -9,7 +9,7 @@ export async function GET() {
     const rows = await sheetsService.readSheet("Expenses!A:G")
 
     // Skip header row and convert to Expense objects
-    const expenses: Expense[] = rows.slice(1).map((row) => ({
+    const expenses: Expense[] = rows.slice(1).map((row: any) => ({
       id: row[0] || "",
       category: row[1] || "",
       amount: Number.parseFloat(row[2]) || 0,

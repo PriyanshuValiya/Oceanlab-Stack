@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { LayoutDashboard, Users, DollarSign, FolderOpen, TrendingUp, LogOut, Menu, X } from "lucide-react"
+import { LayoutDashboard, Users, DollarSign, FolderOpen, TrendingUp, LogOut, Menu, X, PiggyBank } from "lucide-react" // Added PiggyBank icon
 import { Button } from "@/components/ui/button"
 import { useAuth } from "@/components/auth-provider"
 import { cn } from "@/lib/utils"
@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils"
 const navigation = [
   { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
   { name: "Clients", href: "/clients", icon: Users },
+  { name: "Income", href: "/income", icon: PiggyBank }, // New Income link
   { name: "Expenses", href: "/expenses", icon: DollarSign },
   { name: "Projects", href: "/projects", icon: FolderOpen },
   { name: "Profits", href: "/profits", icon: TrendingUp },
